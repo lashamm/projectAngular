@@ -1,6 +1,16 @@
-<div class="try" *ngFor="let el of trains">
-<p>{{el.id}}</p>
+<main>
+    <div class="filter">
+        <input type="text" placeholder="გასვლა">
+        <input type="text" placeholder="ჩასვლა">
+        <input type="date" placeholder="თარიღი">
+    </div>
+    <div class="trainsParent">
+<div class="train" *ngFor="let el of trains">
 <p>{{el.name}}</p>
-<p>{{el.date}}</p>
+<p>გასვლა: {{el.date}}, {{el.departure}}</p>
+<p>ჩასვლის დრო: {{el.arrive}}</p>
+<p>მატარებლის ნომერი: {{el.number}}</p>
 <button routerLink="/trains/id">click</button>
 </div>
+</div>
+</main>
