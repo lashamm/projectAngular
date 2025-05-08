@@ -1,0 +1,25 @@
+main{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding: 50px;
+    gap:20px;
+    .info{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    .imgs{
+        width: 50%;
+        height: 60vh;
+        background-color: yellow;
+        border-radius: 40px;
+        transition: 0.3s;
+        cursor: pointer;
+        background-image: url('/AngularProject/public/Emily-Lush-trains-in-Georgia-country-Batumi-train-Stadler.jpg');
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+}
