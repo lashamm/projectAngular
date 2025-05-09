@@ -1,0 +1,112 @@
+main{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    justify-content: center;
+    align-items: center;
+    #h1{
+        width: 100%;
+        margin-left:300px;
+    }
+    .upper{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .left{
+            display: flex;
+            flex-direction: column;
+            gap:40px;
+            #adr{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+            a{
+                text-decoration: none;
+                transition: 0.3s;
+                &:hover{
+                    color:grey
+                }
+            }
+        }
+            #mail{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                p{
+                    text-decoration: none;
+                    cursor:pointer;
+                    transition: 0.3s;
+                    &:hover{
+                        color:grey;
+                    }
+                }
+            }
+            #num{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                p{
+                    text-decoration: none;
+                    cursor:pointer;
+                    transition: 0.3s;
+                    &:hover{
+                        color:grey;
+                    }
+                }
+            }
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            gap:40px;
+            #soc1{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+            a{
+                text-decoration: none;
+                transition: 0.3s;
+                &:hover{
+                    color:grey
+                }
+            }
+        }
+            #soc2{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                a{
+                    text-decoration: none;
+                    transition: 0.3s;
+                    &:hover{
+                        color:grey
+                    }
+                }
+            }
+            #work{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                p{
+                    text-decoration: none;
+                    cursor:pointer;
+                    transition: 0.3s;
+                    &:hover{
+                        color:grey;
+                    }
+                }
+            }
+        }
+    }
+    .lower{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 100px;
+        iframe{
+            width: 80%;
+            height: 600px;
+        }
+    }
+}
