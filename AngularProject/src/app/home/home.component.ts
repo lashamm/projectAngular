@@ -21,4 +21,12 @@ trains : train [] = []
       this.trains = resp
     })
   }
+
+
+  filter(){
+    
+}
+
+
+
 }

@@ -61,4 +61,94 @@ main{
             }
         }
     }
+
+
+
+
+    .choose{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        justify-content: center;
+        align-items: center;
+        border:solid 1px black;
+        padding:40px;
+        border-radius: 20px;
+        transition: 0.3s;
+        &:hover{
+            transform: scale(1.2);
+        }
+        .chooses{
+            display: flex;
+            flex-direction: row;
+            gap:30px;
+            .first{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                select{
+                    width: 140px;
+                    height: 30px;
+                    border-radius: 10px;
+                    background-color: red;
+                    color:white;
+                    border:none;
+                    cursor: pointer;
+                    option{
+                        border-bottom: none;
+                        color:white;
+                    }
+                }
+            }
+            .second{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                select{
+                    width: 140px;
+                    height: 30px;
+                    border-radius: 10px;
+                    background-color: red;
+                    color:white;
+                    border:none;
+                    cursor: pointer;
+                    option{
+                        border-bottom: none;
+                        color:white;
+                    }
+                }
+            }
+            .dat{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                input{
+                    width: 140px;
+                    height: 30px;
+                    border-radius: 10px;
+                    background-color: red;
+                    color:white;
+                    border:none;
+                    cursor: pointer;
+                }
+            }
+        }
+         .button{
+                button{
+                    width: 160px;
+                    height: 40px;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: red;
+                    color: white;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+    }
 }
+
+

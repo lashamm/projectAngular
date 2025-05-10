@@ -14,4 +14,8 @@ export class ApiService {
   getId( id : number){
     return this.http.get(`https://railway.stepprojects.ge/api/trains/${id}`)
   }
+
+  filter( date : string, from : string, to: string){
+     return this.http.get(`https://railway.stepprojects.ge/api/getdeparture?from=${from}&to=${to}&date=${date}`)
+  }
 }
