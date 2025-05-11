@@ -1,9 +1,11 @@
+<div class="mainP"></div>
 <main>
     <div class="choose">
         <div class="chooses">
         <div class="first">
             <label for="">დან:</label>
-        <select name="rerw" id="" class="sel">
+        <select name="rerw" id="" class="sel"  [(ngModel)]="from">
+            <option value="">აირჩიე საიდან გინდა წასვლა</option>
             <option class="selChild" value="თბილისი">თბილისი</option>
             <option class="selChild" value="ბათუმი">ბათუმი</option>
             <option class="selChild" value="ფოთი">ფოთი</option>
@@ -12,7 +14,8 @@
         <div class="second">
             
             <label for="">მდე:</label>
-            <select name="" id="" class='sel2'>
+            <select name="" id="" class='sel2'  [(ngModel)]="to">
+                <option value="">აირჩიე სად გინდა წასვლა</option>
                 <option class="selChild2" value="ბათუმი">ბათუმი</option>
                 <option class="selChild2" value="ფოთი">ფოთი</option>
                 <option class="selChild2" value="თბილისი">თბილისი</option>
@@ -20,20 +23,21 @@
             </div>
         <div class="dat">
             <label for="">თარიღი:</label>
-        <input  type="date" class="dateINP" />
+        <input  type="date" class="dateINP"  [(ngModel)]="date"/>
     </div>
 </div>
     <div class="button">
-        <button class="search" (click)="filter()" >მოძებნე</button>
+        <button class="search" (click)="filterBtn()" >მოძებნე</button>
     </div>
     </div>
     <div class="trainsParent">
-<div class="train" *ngFor="let el of trains">
-<p>{{el.name}}</p>
-<p>გასვლა: {{el.date}}, {{el.departure}}</p>
-<p>ჩასვლის დრო: {{el.arrive}}</p>
-<p>მატარებლის ნომერი: {{el.number}}</p>
+<div class="train" *ngFor="let train of filter.trains">
+<p>{{train.arrive}}</p>
+<p>{{train.from}}</p>
+<p>{{train.to}}</p>
+<p>{{train.departure}}</p>
 <button routerLink="/trains/id">click</button>
 </div>
 </div>
 </main>
+

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../services/api.service';
-import { train } from '../models/trains';
+import { filterTrain, train } from '../models/trains';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -13,19 +13,35 @@ import { RouterModule } from '@angular/router';
 })
 export class HomeComponent {
 
-  constructor(private api : ApiService){}
-trains : train [] = []
-  ngOnInit(){
-    this.api.getAll().subscribe((resp:any) => {
-      console.log(resp)
-      this.trains = resp
-    })
-  }
-
-
-  filter(){
+  constructor(private api : ApiService){
     
+  }
+filter : filterTrain = new filterTrain
+from = ''
+to= ''
+date = ''
+
+filterBtn(){
+  this.api.filter(this.date, this.from, this.to ).subscribe((resp:any) => {
+    console.log(resp)
+    this.filter = resp[0]
+    console.log(this.filter.trains)
+ })
 }
+
+
+
+//   ngOnInit(){
+//     this.api.getAll().subscribe((resp:any) => {
+//       console.log(resp)
+//       this.trains = resp
+//     })
+//   }
+
+
+//   filter(){
+    
+// }
 
 
 

@@ -17,7 +17,8 @@ main{
         border-radius: 40px;
         transition: 0.3s;
         cursor: pointer;
-        background-image: url('/AngularProject/public/Emily-Lush-trains-in-Georgia-country-Batumi-train-Stadler.jpg');
+        background-image: url(../../../public/imgs/Emily-Lush-trains-in-Georgia-country-Batumi-train-Stadler.jpg);
+        background-position: center;
         &:hover{
             transform: scale(1.05);
         }
