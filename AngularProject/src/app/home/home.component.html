@@ -32,10 +32,10 @@
     </div>
     <div class="trainsParent">
 <div class="train" *ngFor="let train of filter.trains">
-<p>{{train.arrive}}</p>
-<p>{{train.from}}</p>
-<p>{{train.to}}</p>
-<p>{{train.departure}}</p>
+<p>მოსვლა: {{train.arrive}}</p>
+<p>საიდან: {{train.from}}</p>
+<p>სადამდე: {{train.to}}</p>
+<p>გასვლის დრო: {{train.departure}}</p>
 <button routerLink="/trains/id">click</button>
 </div>
 </div>
