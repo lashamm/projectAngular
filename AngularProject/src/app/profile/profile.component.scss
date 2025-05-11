@@ -1,12 +1,12 @@
 main{
     display:flex;
     height: 100vh;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    // background-image:url(samgzavro-mtavari.jpg);
+    background-image:url(..//..//..//public/imgs/samgzavro-mtavari.jpg);
     background-position: center;
-    background-size: cover;
-    
+    background-repeat: no-repeat;
     form{
         display: flex;
         flex-direction: column;
@@ -70,7 +70,7 @@ main{
                 transition: 0.3s;
             }
             a:hover{
-                color:#5E8390;
+                color:rgba(255, 0, 0, 0.377);
             }
         }
             .submit{
@@ -84,6 +84,7 @@ main{
                 cursor: pointer;
                 a{
                     color:white;
+                    text-decoration: none;
                 }
             }
             button:hover{
