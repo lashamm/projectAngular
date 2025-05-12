@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { ActivatedRoute } from '@angular/router';
-import { train } from '../models/trains';
+import { filterTrain, train } from '../models/trains';
 
 @Component({
   selector: 'app-train-id',
@@ -10,18 +10,13 @@ import { train } from '../models/trains';
   styleUrl: './train-id.component.scss'
 })
 export class TrainIdComponent {
+train?: train
+trainData: filterTrain[] = []
 
-  constructor(private api : ApiService, private route : ActivatedRoute){
-    this.route.params.subscribe(id => {
-      console.log('id')
-      this.trainId = id['id']
-    })
-  }
-  trainId = 0
-  singleTrains : train = new train
-  ngOnInit(){
-    this.api.getId(this.trainId).subscribe(resp => {
-      console.log(resp)
+constructor(private router: ActivatedRoute){
+    this.router.params.subscribe(params => {
+      console.log(params);
+      this.train = this.trainData.find(train => train.id == params['id']);
     })
   }
 }

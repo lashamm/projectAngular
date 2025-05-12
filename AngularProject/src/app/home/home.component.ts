@@ -25,24 +25,11 @@ filterBtn(){
   this.api.filter(this.date, this.from, this.to ).subscribe((resp:any) => {
     console.log(resp)
     this.filter = resp[0]
+    if(this.from == this.to){
+      alert('გთხოვთ აირჩიოთ სხვადასხვა დანიშნულება')
+    }
     console.log(this.filter.trains)
  })
 }
-
-
-
-//   ngOnInit(){
-//     this.api.getAll().subscribe((resp:any) => {
-//       console.log(resp)
-//       this.trains = resp
-//     })
-//   }
-
-
-//   filter(){
-    
-// }
-
-
 
 }
