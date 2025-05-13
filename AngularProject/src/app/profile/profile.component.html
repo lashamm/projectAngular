@@ -9,16 +9,16 @@
             <div class="upper">
             <div class="firstCol">
             <label for="username">სახელი:</label>
-            <input class="name" type="text" id="username" name="username" required placeholder="შეიყვანეთ თქვენი სახელი">
+            <input [(ngModel)]="name" class="name" type="text" id="username" name="username" required placeholder="შეიყვანეთ თქვენი სახელი" >
             <label for="email">ელ-ფოსტა:</label>
-            <input class="mail" type="email" id="email" name="email" required placeholder="შეიყვანეთ თქვენი ელ-ფოსტა">
+            <input [(ngModel)]="mail" class="mail" type="email" id="email" name="email" required placeholder="შეიყვანეთ თქვენი ელ-ფოსტა">
         </div>
 
             <div class="secondCol">
             <label for="phone">მობ. ნომერი:</label>
-            <input class="num" type="number" id="phone" name="phone" placeholder="შეიყვანეთ მობ. ნომერი">
+            <input [(ngModel)]="num" class="num" type="number" id="phone" name="phone" placeholder="შეიყვანეთ მობ. ნომერი">
             <label for="password">პაროლი:</label>
-            <input type="password" id="password" name="password" required placeholder="შეიყვანეთ პაროლი">
+            <input [(ngModel)]="pass" type="password" id="password" name="password" required placeholder="შეიყვანეთ პაროლი">
         </div>
         </div>
 
