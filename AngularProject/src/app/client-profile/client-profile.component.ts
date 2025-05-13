@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { userObj } from '../models/user';
+
 
 
 @Component({
@@ -12,14 +12,19 @@ import { userObj } from '../models/user';
   styleUrl: './client-profile.component.scss'
 })
 export class ClientProfileComponent {
-name:string = '';
-mail:string = '';
-num:string = '';
-pass:string = '';
-userObj: userObj[] = []
+name:string | null = '';
+mail:string | null = '';
+num:string | null = '';
+pass:string | null = '';
 
 
-userObj = localStorage.getItem('userObj')
+
+ngOnInit(){
+  this.name = localStorage.getItem(userObj.name);
+  this.mail = localStorage.getItem(userObj.mail)
+  this.num = localStorage.getItem(userObj.num)
+  this.pass = localStorage.getItem(userObj.pass)
+}
 
 
 
