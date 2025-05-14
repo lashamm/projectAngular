@@ -24,11 +24,13 @@ ngOnInit(){
   // if(localStorage.getItem("userObj")!=null){
   // console.log(JSON.parse(localStorage.getItem("userObj")[0]))
   // }
-
-  // this.name = JSON.parse().name;
-  // this.mail = localStorage.getItem(JSON.parse(userObj.mail));
-  // this.num = localStorage.getItem(JSON.parse(userObj.num));
-  // this.pass = localStorage.getItem(JSON.parse(userObj.pass))
+  console.log(JSON.parse(localStorage.getItem("userObj") || "") [0])
+  console.log(JSON.parse(localStorage.getItem("userObj") || "") [0].name)
+  
+  this.name = JSON.parse(localStorage.getItem("userObj") || "") [0].name;
+  this.mail = JSON.parse(localStorage.getItem("userObj") || "") [0].mail;
+  this.num = JSON.parse(localStorage.getItem("userObj") || "") [0].num;
+  this.pass = JSON.parse(localStorage.getItem("userObj") || "") [0].pass;
 }
 
 

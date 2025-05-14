@@ -1,0 +1,33 @@
+main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../public/imgs/ჯრტ-scaled.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    .info{
+        
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(15px);
+        justify-content: center;
+        gap:10px;
+        border-radius: 15px;
+        padding: 120px;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+        p{
+            font-size: 30px;
+            transition: 0.2s;
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
