@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../services/api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { filterTrain, train } from '../models/trains';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-train-id',
-  imports: [],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './train-id.component.html',
   styleUrl: './train-id.component.scss'
 })
@@ -14,6 +16,13 @@ train?: train
 trainData: filterTrain[] = []
 
 constructor(private router: ActivatedRoute){
+    // this.router.params.subscribe(params => {
+    //   console.log(params);
+    //   this.train = this.trainData.find(train => train.id == params['id']);
+    // })
+  }
+
+  ngOnInit(){
     this.router.params.subscribe(params => {
       console.log(params);
       this.train = this.trainData.find(train => train.id == params['id']);
