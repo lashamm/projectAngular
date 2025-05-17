@@ -1,2 +1,5 @@
-<!-- <div class="div" *ngFor="let el of train.vagon">
-</div> -->
+<div class="styleCard">
+<div class="div" *ngFor="let el of train?.vagons">
+    <p routerLink="/tickets/{{el.id}}">{{el.name}}</p>
+</div>
+</div>

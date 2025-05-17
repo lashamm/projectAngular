@@ -4,6 +4,7 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { filterTrain, train } from '../models/trains';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ticket } from '../models/tickets';
 
 @Component({
   selector: 'app-train-id',
@@ -12,24 +13,23 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './train-id.component.scss'
 })
 export class TrainIdComponent {
-train?: train
+train?: train 
 trainData: filterTrain[] = []
 
-constructor(private router: ActivatedRoute, api: ApiService){
-    // this.router.params.subscribe(params => {
-    //   console.log(params);
-    //   this.train = this.trainData.find(train => train.id == params['id']);
-    // })
+constructor(private router: ActivatedRoute, private api: ApiService){
   }
 
-  // ngOnInit(){
-  //   this.router.params.subscribe(params => {
-  //     console.log(params);
-  //     console.log(this.train)
-  //     this.train = this.trainData.find(train => train.id == params['id']);
-  //   })
-  // }
-  // ngOnInit(){
-  //   this.api.getVagon()
-  // }
+  ngOnInit(){
+    this.router.params.subscribe(params => {
+      console.log(params);
+      console.log(this.train)
+      this.train = this.trainData.find(train => train.id == params['id']);
+          this.api.getId(params['id']).subscribe((resp:any) => {
+    console.log(resp)
+    this.train = resp
+    // this.trainData = resp
+    })
+ })
+
+  }
 }

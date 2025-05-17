@@ -1,0 +1,16 @@
+.styleCard{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .div{
+        border:1px solid black;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        cursor: pointer;
+    }
+}

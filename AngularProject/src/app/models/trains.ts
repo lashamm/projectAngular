@@ -10,8 +10,15 @@ export class train {
     departure?:string;
     arrive?:string;
     departureId?:departureId[]
+    vagons?: vagon[]
 }
-
+class vagon {
+    id!: number;
+    name?: string;
+    seats?: null;
+    trainId?: number;
+    trainNumber?: number ;
+}
 class departureId {
     id?:number;
     trainId?:number;
