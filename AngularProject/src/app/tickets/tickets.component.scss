@@ -1,0 +1,50 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    .parent{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    .div{
+        border: 1px solid black;
+        padding: 10px;
+        cursor: pointer;
+        width: 120px;
+        height: 80px;
+        text-align: center;
+        background-color: red;
+        transition: 0.3s;
+        border-radius: 10px;
+        p{
+            color:white;
+        }
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+button{
+    width: 200px;
+    height: 50px;
+    border:none;
+    background-color: red;
+    color:white;
+    border:1px solid black;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+}

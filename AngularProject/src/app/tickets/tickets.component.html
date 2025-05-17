@@ -1,6 +1,10 @@
-<div class="dsdf">
+<main>
+<div class="parent">
 <div class="div" *ngFor="let el of ticket?.seats">
-<p>{{el.price}}</p>
-<p>{{el.number}}</p>
+<p>ნომერი: {{el.number}}</p>
+<p>{{el.price}} ლარი</p>
+<p>ვაგონი: {{el.vagonId}}</p>
 </div>
 </div>
+<button>შეიძინე ბილეთ(ებ)ი</button>
+</main>
