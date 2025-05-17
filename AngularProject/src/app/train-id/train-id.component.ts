@@ -25,6 +25,7 @@ constructor(private router: ActivatedRoute){
   ngOnInit(){
     this.router.params.subscribe(params => {
       console.log(params);
+      console.log(this.train)
       this.train = this.trainData.find(train => train.id == params['id']);
     })
   }
