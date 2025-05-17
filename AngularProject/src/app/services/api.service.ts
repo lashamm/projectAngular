@@ -18,4 +18,7 @@ export class ApiService {
   filter( date : string, from : string, to: string){
      return this.http.get(`https://railway.stepprojects.ge/api/getdeparture?from=${from}&to=${to}&date=${date}`)
   }
+  getVagon( id : number){
+    return this.http.get(`https://railway.stepprojects.ge/api/getvagon/${id}`)
+  }
 }

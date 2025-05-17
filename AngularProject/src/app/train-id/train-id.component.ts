@@ -15,18 +15,21 @@ export class TrainIdComponent {
 train?: train
 trainData: filterTrain[] = []
 
-constructor(private router: ActivatedRoute){
+constructor(private router: ActivatedRoute, api: ApiService){
     // this.router.params.subscribe(params => {
     //   console.log(params);
     //   this.train = this.trainData.find(train => train.id == params['id']);
     // })
   }
 
-  ngOnInit(){
-    this.router.params.subscribe(params => {
-      console.log(params);
-      console.log(this.train)
-      this.train = this.trainData.find(train => train.id == params['id']);
-    })
-  }
+  // ngOnInit(){
+  //   this.router.params.subscribe(params => {
+  //     console.log(params);
+  //     console.log(this.train)
+  //     this.train = this.trainData.find(train => train.id == params['id']);
+  //   })
+  // }
+  // ngOnInit(){
+  //   this.api.getVagon()
+  // }
 }
