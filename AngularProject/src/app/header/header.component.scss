@@ -1,27 +1,120 @@
-nav{
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
+$breakpoint-mobile: 880px;
+$primary-color: red;
+$secondary-color: #fff;
+$transition-speed: 0.3s;
+
+.header {
+    background: $primary-color;
+    padding: 1rem;
+    width: 100%;
     height: 100px;
-    h1{
-        color:white;
-        cursor:pointer;
+    top: 0;
+    z-index: 1000;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        color: $secondary-color;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-decoration: none;
         transition: 0.3s;
         &:hover{
-            transform: scale(1.15);
+            transform: scale(1.1);
         }
     }
-    ul{
-        display: flex;
-        gap:20px;
-        li{
+
+    &__burger {
+        display: none; 
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1001;
+
+        @media (max-width: $breakpoint-mobile) {
+            display: block;
+        }
+
+        &-line {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: $secondary-color;
+            margin: 5px 0;
+            transition: all $transition-speed ease;
+        }
+    }
+
+    &__nav {
+        @media (max-width: $breakpoint-mobile) {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 70%;
+            height: 100vh;
+            background: darken($primary-color, 5%);
+            transition: right $transition-speed ease;
+            padding-top: 4rem;
+        }
+
+        &-list {
+            display: flex;
             list-style: none;
-            color: white;
-            transition: 0.3s;
-            cursor: pointer;
-            &:hover{
-                transform: scale(1.1);
+            gap: 1.5rem;
+
+            @media (max-width: $breakpoint-mobile) {
+                flex-direction: column;
+                padding: 1rem;
+            }
+        }
+
+        &-link {
+            color: $secondary-color;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity $transition-speed;
+
+            &:hover {
+                opacity: 0.8;
             }
         }
     }
+
+    &.active {
+        .header__nav {
+            right: 0;
+        }
+
+        .header__burger-line:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .header__burger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .header__burger-line:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+}
+
+
+.header__nav-link{
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.header__container{
+    margin-top: 20px;
 }

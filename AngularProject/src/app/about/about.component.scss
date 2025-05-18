@@ -24,3 +24,22 @@ main{
         }
     }
 }
+
+@media screen and (max-width:1087px) {
+    .info{
+        width: 100% !important;
+    }
+    main{
+        height: 130vh;
+    }
+    .imgs{
+        display: none;
+        width: 0%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    main{
+        height: 160vh;
+    }
+}

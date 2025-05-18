@@ -1,4 +1,7 @@
 <div class="styleCard">
+    <div class="text">
+        <h1 class='h1'>აირჩიეთ კლასი</h1>
+    </div>
 <div class="div" *ngFor="let el of train?.vagons">
     <p routerLink="/tickets/{{el.id}}">{{el.name}}</p>
 </div>

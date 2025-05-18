@@ -111,3 +111,19 @@ main{
         }
     }
 }
+
+
+@media screen and (max-width:610px) {
+    .left{
+        padding-left: 15px;
+    }
+    .right{
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    iframe{
+        height: 300px;
+    }
+}

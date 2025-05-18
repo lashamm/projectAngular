@@ -1,10 +1,20 @@
-<nav>
-    <h1 routerLink="/home">TrainApiProject</h1>
-    <ul>
-        <li routerLink="/home">შეიძინე ბილეთბი</li>
-        <li routerLink="/about">ჩვენს შესახებ</li>
-        <li routerLink="/contact">კონტაქტი</li>
-        <li routerLink="/profile">რეგისტრაცია</li>
-        <li routerLink='/client-profile'>პროფილი</li>
-    </ul>
-</nav>
+<header class="header">
+        <div class="header__container">
+            <a routerLink="/home" class="header__logo">ProjectAngularApi</a>
+            
+            <button routerLink="/mobile-nav"  class="header__burger" aria-label="Toggle Menu">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li routerLink="/home" class="header__nav-link">შეიძინე ბილეთბი</li>
+                    <li routerLink="/about" class="header__nav-link">ჩვენს შესახებ</li>
+                    <li routerLink="/contact" class="header__nav-link">კონტაქტი</li>
+                    <li routerLink="/profile" class="header__nav-link">რეგისტრაცია</li>
+                    <li routerLink='/client-profile' class="header__nav-link">პროფილი</li>
+                </ul>
+            </nav>
+        </div>
+    </header>

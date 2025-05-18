@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ClientProfileComponent } from './client-profile/client-profile.component';
 import { TicketsComponent } from './tickets/tickets.component';
+import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: "home", pathMatch : "full"},
@@ -16,6 +17,7 @@ export const routes: Routes = [
     {path: 'trains/:id', component : TrainIdComponent},
     {path: 'about', component : AboutComponent},
     {path: 'contact', component : ContactComponent},
+    {path: 'mobile-nav', component : MobileNavComponent},
     {path: 'profile', component : ProfileComponent},
     {path: 'tickets/:id', component : TicketsComponent},
     {path: 'client-profile', component : ClientProfileComponent},

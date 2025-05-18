@@ -8,7 +8,6 @@ main{
     background-repeat: no-repeat;
     background-position: left;
     .info{
-        
         display: flex;
         flex-direction: column;
         backdrop-filter: blur(15px);
@@ -17,7 +16,6 @@ main{
         border-radius: 15px;
         padding: 120px;
         transition: 0.3s;
-        gap:10px;
         align-items: center;
         gap:30px;
         cursor: pointer;
@@ -49,5 +47,15 @@ main{
             }
         }
     }
+    }
+}
+
+
+@media screen and (max-width:610px) {
+    .info{
+        width: 370px;
+        &:hover{
+            transform: scale(1.0) !important;
+        }
     }
 }

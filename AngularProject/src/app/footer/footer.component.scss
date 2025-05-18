@@ -117,3 +117,63 @@ main{
     }
 }
 }
+
+
+@media screen and (max-width:1080px) {
+    .lilInfo{
+        display: none !important;
+    }
+    .footParent{
+        justify-content: center;
+        .left{
+            width: 40%;
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            gap:40px;
+            #soc1{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+            a{
+                text-decoration: none;
+                transition: 0.3s;
+                &:hover{
+                    color:red
+                }
+            }
+        }
+            #soc2{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                a{
+                    text-decoration: none;
+                    transition: 0.3s;
+                    &:hover{
+                        color:red
+                    }
+                }
+            }
+            #work{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                p{
+                    text-decoration: none;
+                    cursor:pointer;
+                    transition: 0.3s;
+                    &:hover{
+                        color:red;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
+    }
+}

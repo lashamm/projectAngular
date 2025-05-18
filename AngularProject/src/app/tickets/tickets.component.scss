@@ -4,7 +4,7 @@ main{
     align-items: center;
     justify-content: center;
     padding-bottom: 30px;
-    // background-image: url();
+    // background-image: url(); 
     background-repeat: no-repeat;
     background-position: center;
     .parent{
@@ -22,7 +22,6 @@ main{
         width: 120px;
         height: 80px;
         text-align: center;
-        // background-color: red;
         transition: 0.3s;
         border-radius: 10px;
         p{
@@ -46,5 +45,74 @@ button{
     &:hover{
         transform: scale(1.2);
     }
+}
+}
+
+
+@media screen and (max-width:1320px) {
+    .parent{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto !important;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+}
+
+@media screen and (max-width:880px) {
+    .parent{
+    display: grid;
+    grid-template-columns: auto auto auto !important;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.div{
+        border: 1px solid black;
+        padding: 10px;
+        cursor: pointer;
+        width: 120px;
+        height: 80px;
+        text-align: center;
+        transition: 0.3s;
+        border-radius: 10px;
+        p{
+            color:white;
+        }
+        &:hover{
+            transform: scale(1) !important;
+        }
+}
+}
+
+@media screen and (max-width:480px) {
+    .parent{
+    display: grid;
+    grid-template-columns: auto auto !important;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.div{
+        border: 1px solid black;
+        padding: 10px;
+        cursor: pointer;
+        width: 120px;
+        height: 80px;
+        text-align: center;
+        transition: 0.3s;
+        border-radius: 10px;
+        p{
+            color:white;
+        }
+        &:hover{
+            transform: scale(1) !important;
+        }
 }
 }
