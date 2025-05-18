@@ -17,11 +17,15 @@ main{
         border-radius: 15px;
         padding: 120px;
         transition: 0.3s;
+        gap:10px;
+        align-items: center;
+        gap:30px;
         cursor: pointer;
         &:hover{
             transform: scale(1.1);
             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         }
+        .infos{
         p{
             font-size: 30px;
             transition: 0.2s;
@@ -29,5 +33,21 @@ main{
                 transform: scale(1.05);
             }
         }
+    }
+    .btn{
+        button{
+            width: 140px;
+            height: 40px;
+            background-color: red;
+            color:white;
+            border:1px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
     }
 }

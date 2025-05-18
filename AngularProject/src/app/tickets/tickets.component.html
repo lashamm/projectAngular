@@ -1,6 +1,6 @@
 <main>
 <div class="parent">
-<div class="div" *ngFor="let el of ticket?.seats">
+<div (click)="fun()" [style]="btnStyle" class="div" *ngFor="let el of ticket?.seats">
 <p>ნომერი: {{el.number}}</p>
 <p>{{el.price}} ლარი</p>
 <p>ვაგონი: {{el.vagonId}}</p>

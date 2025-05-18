@@ -15,28 +15,19 @@ import { userObj } from '../models/user';
 export class ClientProfileComponent {
 name:string | null = '';
 mail:string | null = '';
-num:string | null = '';
+num:string  | null = '';
 pass:string | null = '';
 
-
-
 ngOnInit(){
-  // if(localStorage.getItem("userObj")!=null){
-  // console.log(JSON.parse(localStorage.getItem("userObj")[0]))
-  // }
   console.log(JSON.parse(localStorage.getItem("userObj") || "") [0])
   console.log(JSON.parse(localStorage.getItem("userObj") || "") [0].name)
-  
   this.name = JSON.parse(localStorage.getItem("userObj") || "") [0].name;
   this.mail = JSON.parse(localStorage.getItem("userObj") || "") [0].mail;
-  this.num = JSON.parse(localStorage.getItem("userObj") || "") [0].num;
+  this.num  = JSON.parse(localStorage.getItem("userObj") || "") [0].num;
   this.pass = JSON.parse(localStorage.getItem("userObj") || "") [0].pass;
 }
-
-
-
+fun(){
+  localStorage.removeItem('userObj'); 
+} 
 }
 
-
-
-// localStorage.getItem('userObj')

@@ -20,6 +20,21 @@ export class TicketsComponent implements OnInit, OnDestroy {
 
   ticket?: ticket;
   ticketData: ticket[] = [];  
+  btnStyle = 'background-color: red;'
+
+  
+
+  fun(){
+    if(this.btnStyle == 'background-color: red;'){
+      this.btnStyle = 'background-color: green;'
+    }
+    else if(this.btnStyle == 'background-color: green;'){
+      this.btnStyle = 'background-color: red;'
+    }
+    else{
+      alert('error')
+    }
+  }
 
   ngOnInit() {
     this.routeSub = this.router.params.subscribe(params => {
