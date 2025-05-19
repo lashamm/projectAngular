@@ -8,7 +8,7 @@ export class ticket{
 export class seat{
       seatId?: string;
       number?: string;
-      price?: number
+      price?: number;
       isOccupied?: boolean;
       vagonId?: number;
 }

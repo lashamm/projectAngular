@@ -85,7 +85,7 @@ price = 0
 seatId = ''
 vagonId= 0
 
-  toggleSeat(seatNumber: string | undefined) {
+  toggleSeat(seatNumber: string | undefined,) {
     if (!seatNumber) return;
     
     if (this.selectedSeats.has(seatNumber)) {

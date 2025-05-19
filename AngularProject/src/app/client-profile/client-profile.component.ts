@@ -13,10 +13,12 @@ import { userObj } from '../models/user';
   styleUrl: './client-profile.component.scss'
 })
 export class ClientProfileComponent {
-name:string | null = '';
-mail:string | null = '';
-num:string  | null = '';
-pass:string | null = '';
+name:string | null = 'თქვენ არ ხართ დარეგისტრირებული';
+mail:string | null = 'თქვენ არ ხართ დარეგისტრირებული';
+num:string  | null = 'თქვენ არ ხართ დარეგისტრირებული';
+pass:string | null = 'თქვენ არ ხართ დარეგისტრირებული';
+
+
  
 ngOnInit(){
   console.log(JSON.parse(localStorage.getItem("userObj") || "") [0])
@@ -26,6 +28,8 @@ ngOnInit(){
   this.pass = JSON.parse(localStorage.getItem("userObj") || "") [0].mail;
   this.num  = JSON.parse(localStorage.getItem("userObj") || "") [0].pass;
 }
-
+fun(){
+  localStorage.removeItem('userObj')
+}
 }
 
