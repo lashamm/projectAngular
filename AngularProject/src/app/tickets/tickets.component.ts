@@ -85,25 +85,27 @@ price = 0
 seatId = ''
 vagonId= 0
 
-  toggleSeat(seatNumber: string | undefined,) {
-    if (!seatNumber) return;
+  toggleSeat(seatNumber: string | undefined, seat: seat) {
+  if (!seatNumber) return;
+  
+  if (this.selectedSeats.has(seatNumber)) {
+    this.selectedSeats.delete(seatNumber);
     
-    if (this.selectedSeats.has(seatNumber)) {
-      this.selectedSeats.delete(seatNumber);
-    } else {
-      this.selectedSeats.add(seatNumber);
-    }
-
+    this.ticketStorage = this.ticketStorage.filter(item => item.number !== seatNumber);
+  } else {
+    this.selectedSeats.add(seatNumber);
+    
     this.ticketStorage.push({
-    'seatId': this.seatId,
-    'number': this.number,
-    'price': this.price,
-    'vagonId': this.vagonId
-
-  })
-  console.log(this.ticketStorage)
-  localStorage.setItem('tktStrg',JSON.stringify(this.ticketStorage))
+      'seatId': seat.seatId,
+      'number': seat.number,
+      'price': seat.price,
+      'vagonId': seat.vagonId
+    });
   }
+
+  console.log(this.ticketStorage);
+  localStorage.setItem('tktStrg', JSON.stringify(this.ticketStorage));
+}
 
   getSeatStyle(seatNumber: string | undefined): any {
     if (!seatNumber) return {};

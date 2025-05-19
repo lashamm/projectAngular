@@ -21,5 +21,7 @@ export class ApiService {
   getVagon( id : number){
     return this.http.get(`https://railway.stepprojects.ge/api/getvagon/${id}`)
   }
-  
+  // postTickets(seatId:string){
+  //   return this.http.post(`https://railway.stepprojects.ge/api/tickets/register${seatId}`)
+  // }
 }
