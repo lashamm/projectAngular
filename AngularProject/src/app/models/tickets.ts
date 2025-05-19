@@ -5,7 +5,7 @@ export class ticket{
     name?: string;
     seats?: seat[]
 }
-class seat{
+export class seat{
       seatId?: string;
       number?: string;
       price?: number

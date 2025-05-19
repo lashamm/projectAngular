@@ -59,7 +59,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { ticket } from '../models/tickets'; 
+import { seat, ticket } from '../models/tickets'; 
 import { ApiService } from '../services/api.service';
 import { Subscription } from 'rxjs';
 
@@ -78,6 +78,12 @@ export class TicketsComponent implements OnInit, OnDestroy {
   ticket?: ticket;
   ticketData: ticket[] = [];  
   selectedSeats: Set<string> = new Set<string>(); 
+  ticketStorage : seat[] = []
+
+number = ''
+price = 0
+seatId = ''
+vagonId= 0
 
   toggleSeat(seatNumber: string | undefined) {
     if (!seatNumber) return;
@@ -87,6 +93,16 @@ export class TicketsComponent implements OnInit, OnDestroy {
     } else {
       this.selectedSeats.add(seatNumber);
     }
+
+    this.ticketStorage.push({
+    'seatId': this.seatId,
+    'number': this.number,
+    'price': this.price,
+    'vagonId': this.vagonId
+
+  })
+  console.log(this.ticketStorage)
+  localStorage.setItem('tktStrg',JSON.stringify(this.ticketStorage))
   }
 
   getSeatStyle(seatNumber: string | undefined): any {
