@@ -1,15 +1,3 @@
-<!-- <main>
-<div class="parent">
-<div (click)="fun()" [style]="btnStyle" class="div" *ngFor="let el of ticket?.seats">
-<p>ნომერი: {{el.number}}</p>
-<p>{{el.price}} ლარი</p>
-<p>ვაგონი: {{el.vagonId}}</p>
-</div>
-</div>
-<button>შეიძინე ბილეთ(ებ)ი</button>
-</main> -->
-
-
 <main>
   <div class="parent">
     <div (click)="toggleSeat(el.number, el)" 
@@ -21,5 +9,5 @@
   <p>ვაგონი: {{el.vagonId}}</p>
 </div>
   </div>
-  <button (click)="fun()">შეიძინე ბილეთ(ებ)ი</button>
+  <button routerLink="/home" (click)="postTicket()">შეიძინე ბილეთ(ებ)ი</button>
 </main>

@@ -12,3 +12,13 @@ export class seat{
       isOccupied?: boolean;
       vagonId?: number;
 }
+
+
+
+export class postObj{
+      seatId?: string;
+      number?: string;
+      price?: number;
+      isOccupied?: boolean;
+      vagonId?: number;
+}

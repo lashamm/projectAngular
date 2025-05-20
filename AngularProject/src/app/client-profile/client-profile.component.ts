@@ -23,7 +23,7 @@ export class ClientProfileComponent {
         this.name = userData[0].name || this.name;
         this.mail = userData[0].mail || this.mail;
         this.pass = userData[0].pass || this.pass;
-        this.num = userData[0].num || this.num;
+        this.num  = userData[0].num  || this.num;
       }
     } catch (e) {
       console.error("Error parsing user data:", e);
