@@ -80,10 +80,6 @@ export class TicketsComponent implements OnInit, OnDestroy {
   selectedSeats: Set<string> = new Set<string>(); 
   ticketStorage : seat[] = []
 
-number = ''
-price = 0
-seatId = ''
-vagonId= 0
 
   toggleSeat(seatNumber: string | undefined, seat: seat) {
   if (!seatNumber) return;

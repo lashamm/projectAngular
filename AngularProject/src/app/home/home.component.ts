@@ -25,7 +25,10 @@ filterBtn(){
   this.api.filter(this.date, this.from, this.to ).subscribe((resp:any) => {
     console.log(resp)
     this.filter = resp[0]
-    if(this.from == this.to){
+    if(this.from == this.to ||
+       this.from == 'აირჩიე საიდან გინდა წასვლა' && this.to == 'აირჩიე სად გინდა წასვლა' ||
+       this.from == 'ფოთი' && this.to == 'ბათუმი' ||
+       this.from == 'ბათუმი' && this.to == 'ფოთი'){
       alert('გთხოვთ აირჩიოთ სხვადასხვა დანიშნულება')
     }
     console.log(this.filter.trains)
