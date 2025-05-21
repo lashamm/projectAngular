@@ -1,13 +1,29 @@
 <main>
   <div class="parent">
     <div (click)="toggleSeat(el.number, el)" 
-     [ngStyle]="getSeatStyle(el.number)" 
-     class="div" 
-     *ngFor="let el of ticket?.seats">
-  <p>ნომერი: {{el.number}}</p>
-  <p>{{el.price}} ლარი</p>
-  <p>ვაგონი: {{el.vagonId}}</p>
-</div>
+         [ngStyle]="getSeatStyle(el.number, el.isOccupied)" 
+         class="seat" 
+         *ngFor="let el of ticket?.seats">
+      <p>ნომერი: {{el.number}}</p>
+      <p>{{el.price}} ლარი</p>
+      <p>ვაგონი: {{el.vagonId}}</p>
+      <p *ngIf="el.isOccupied">დაკავებულია</p>
+    </div>
   </div>
-  <button routerLink="/home" (click)="postTicket()">შეიძინე ბილეთ(ებ)ი</button>
+  
+  <button
+    (click)="postTicket()" 
+    [disabled]="selectedSeats.size === 0 || isPosting || isPosted"
+    [ngClass]="{
+      'posting': isPosting,
+      'posted': isPosted,
+      'error': postError
+    }">
+    {{
+      isPosting ? 'გაგზავნა...' : 
+      isPosted ? 'შეძენილია!' : 
+      postError ? 'შეცდომა, სცადეთ თავიდან' : 
+      'შეიძინე ბილეთ(ებ)ი'
+    }}
+  </button>
 </main>

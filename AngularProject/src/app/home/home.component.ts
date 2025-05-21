@@ -20,8 +20,18 @@ filter : filterTrain = new filterTrain
 from = ''
 to= ''
 date = ''
-
+user = ''
+ngOnInit(){
+  const userData = JSON.parse(localStorage.getItem("userObj") || "[]");
+if (userData.length > 0) {
+        this.user = 'მომხმარებელი: '+userData[0].name;
+      }
+}
 filterBtn(){
+  if(this.user == ''){
+    alert('error')
+  }
+  else{
   this.api.filter(this.date, this.from, this.to ).subscribe((resp:any) => {
     console.log(resp)
     this.filter = resp[0]
@@ -33,6 +43,7 @@ filterBtn(){
     }
     console.log(this.filter.trains)
  })
+}
 }
 
 }

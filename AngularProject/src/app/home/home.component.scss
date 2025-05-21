@@ -8,6 +8,9 @@ main{
     background-image: url(../../../public/imgs/ბათუმი-scaled.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    p{
+        display: none;
+    }
     .filter{
         border:1px solid black;
         height: 100px;

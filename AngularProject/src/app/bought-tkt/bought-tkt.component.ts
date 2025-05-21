@@ -14,11 +14,17 @@ export class BoughtTktComponent {
  constructor(private api : ApiService, private router : ActivatedRoute){
   }
 
-seatId = localStorage.getItem('boughtTkt')
+seatId: string | null = 'თქვენ არ გაქვთ შეძენილი ბილეთები'
+
 ngOnInit(){
   console.log(this.seatId)
+  if(this.seatId = localStorage.getItem('boughtTkt')){
+    this.seatId = 'თქვენი ბილეთის ID არის: '+localStorage.getItem('boughtTkt')+" დააჭირეთ თუ გინდათ გაუქმება"
+  }
+  else(
+    this.seatId = 'თქვენ არ გაქვთ შეძენილი ბილეთები'
+  )
 }
-
 
   delete(){
     const tktId = localStorage.getItem('boughtTkt')

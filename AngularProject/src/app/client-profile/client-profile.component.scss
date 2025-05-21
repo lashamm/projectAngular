@@ -48,6 +48,19 @@ main{
         }
     }
     }
+    #btn2{
+            width: 140px;
+            height: 40px;
+            background-color: red;
+            color:white;
+            border:1px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+    }
 }
 
 
