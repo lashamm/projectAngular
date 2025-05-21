@@ -27,7 +27,6 @@ constructor(private router: ActivatedRoute, private api: ApiService){
           this.api.getId(params['id']).subscribe((resp:any) => {
     console.log(resp)
     this.train = resp
-    // this.trainData = resp
     })
  })
 
