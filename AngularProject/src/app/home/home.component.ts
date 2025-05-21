@@ -29,7 +29,7 @@ if (userData.length > 0) {
 }
 filterBtn(){
   if(this.user == ''){
-    alert('error')
+    alert('ბილეთების შესაძენად თქვენ უნდა იყოთ დარეგისტრირებული!')
   }
   else{
   this.api.filter(this.date, this.from, this.to ).subscribe((resp:any) => {
