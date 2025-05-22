@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { userObj } from '../models/user';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-profile',
@@ -15,18 +16,35 @@ name = ''
 mail = ''
 num = ''
 pass = ''
+cardNum = ''
+cardOwner = ''
+expData = ''
+ccv = ''
 
 userObj : userObj[] = []
 
 click(){
+  if(this.name == '' || 
+     this.mail == '' ||
+      this.num == '' ||
+     this.pass == '' ||
+  this.cardNum == '' || 
+this.cardOwner == '' || 
+  this.expData == '' ||
+      this.ccv == '' ){
+        Swal.fire("შეავსეთ ყველა ველი");
+  }
+  else{
   this.userObj.push({
     "name": this.name,
     "mail": this.mail,
     'num': this.num,
     'pass': this.pass
   })
+  Swal.fire("თქვენ წარმატებით დარეგისტრირდით");
   console.log(this.userObj)
   localStorage.setItem('userObj',JSON.stringify(this.userObj))
+}
 }
 
 }
