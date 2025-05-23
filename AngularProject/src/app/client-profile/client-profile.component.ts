@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { userObj } from '../models/user';
+import { SignalService } from '../services/signal.service';
 
 @Component({
   selector: 'app-client-profile',
@@ -11,6 +12,9 @@ import { userObj } from '../models/user';
   styleUrl: './client-profile.component.scss'
 })
 export class ClientProfileComponent {
+
+  constructor(private auth : SignalService) { }
+
   name: string = 'თქვენ არ ხართ დარეგისტრირებული';
   mail: string = 'თქვენ არ ხართ დარეგისტრირებული';
   num: string = 'თქვენ არ ხართ დარეგისტრირებული';
@@ -32,10 +36,12 @@ export class ClientProfileComponent {
 
   fun() {
     localStorage.removeItem('userObj');
+    this.auth.deAuth();
     this.name = 'თქვენ არ ხართ დარეგისტრირებული';
     this.mail = 'თქვენ არ ხართ დარეგისტრირებული';
     this.num = 'თქვენ არ ხართ დარეგისტრირებული';
     this.pass = 'თქვენ არ ხართ დარეგისტრირებული';
   }
+
 }
 

@@ -118,3 +118,12 @@ $transition-speed: 0.3s;
 .header__container{
     margin-top: 20px;
 }
+
+
+@media screen and (max-wdith:880px) {
+    .header__logo{
+        &:hover{
+            scale: (1) !important;
+        }
+    }
+}

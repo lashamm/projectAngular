@@ -3,6 +3,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
     nav{
         display: flex;
         height:50vh;
@@ -14,6 +15,7 @@ main{
             li{
                 list-style: none;
                 font-size:40px;
+                cursor: pointer;
             }
         }
     }

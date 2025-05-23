@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterModule } from '@angular/router';
 import { userObj } from '../models/user';
 import Swal from 'sweetalert2';
+import { SignalService } from '../services/signal.service';
 
 @Component({
   selector: 'app-profile',
@@ -12,6 +13,7 @@ import Swal from 'sweetalert2';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
+  constructor( private auth : SignalService) { }
 name = ''
 mail = ''
 num = ''
@@ -42,6 +44,7 @@ this.cardOwner == '' ||
     'pass': this.pass
   })
   Swal.fire("თქვენ წარმატებით დარეგისტრირდით");
+  this.auth.auth()
   console.log(this.userObj)
   localStorage.setItem('userObj',JSON.stringify(this.userObj))
 }

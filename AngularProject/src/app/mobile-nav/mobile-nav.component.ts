@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -10,5 +10,11 @@ import { RouterModule } from '@angular/router';
   styleUrl: './mobile-nav.component.scss'
 })
 export class MobileNavComponent {
+
+  @Output() show = new EventEmitter<boolean>();
+
+   hide(){
+    this.show.emit(false)
+   }
 
 }

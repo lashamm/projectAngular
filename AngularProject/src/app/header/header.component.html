@@ -2,7 +2,7 @@
         <div class="header__container">
             <a routerLink="/home" class="header__logo">ProjectAngularApi</a>
             
-            <button routerLink="/mobile-nav"  class="header__burger" aria-label="Toggle Menu">
+            <button (click)="togleBurger()" class="header__burger" aria-label="Toggle Menu">
                 <span class="header__burger-line"></span>
                 <span class="header__burger-line"></span>
                 <span class="header__burger-line"></span>
@@ -12,9 +12,11 @@
                     <li routerLink="/home" class="header__nav-link">შეიძინე ბილეთბი</li>
                     <li routerLink="/about" class="header__nav-link">ჩვენს შესახებ</li>
                     <li routerLink="/contact" class="header__nav-link">კონტაქტი</li>
-                    <li routerLink="/profile" class="header__nav-link">რეგისტრაცია</li>
+                    <li *ngIf="!isAuht" routerLink="/profile" class="header__nav-link">რეგისტრაცია</li>
                     <li routerLink='/client-profile' class="header__nav-link">პროფილი</li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <app-mobile-nav *ngIf="show" (show)="hideBurger($event)"></app-mobile-nav>
