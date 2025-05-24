@@ -67,6 +67,11 @@ main{
 @media screen and (max-width:610px) {
     .info{
         width: 370px;
+        p{
+            font-size: 25px !important;
+            padding-left: 5px !important;
+            padding-right: 5px !important;
+        }
         &:hover{
             transform: scale(1.0) !important;
         }
