@@ -34,7 +34,7 @@ click(){
 this.cardOwner == '' || 
   this.expData == '' ||
       this.ccv == '' ){
-        Swal.fire("შეავსეთ ყველა ველი");
+        // Swal.fire("შეავსეთ ყველა ველი");
   }
   else{
   this.userObj.push({
@@ -43,7 +43,7 @@ this.cardOwner == '' ||
     'num': this.num,
     'pass': this.pass
   })
-  Swal.fire("თქვენ წარმატებით დარეგისტრირდით");
+  // Swal.fire("თქვენ წარმატებით დარეგისტრირდით");
   this.auth.auth()
   console.log(this.userObj)
   localStorage.setItem('userObj',JSON.stringify(this.userObj))
