@@ -59,7 +59,7 @@ $transition-speed: 0.3s;
             right: -100%;
             width: 70%;
             height: 100vh;
-            background: darken($primary-color, 5%);
+            background-color:red;
             transition: right $transition-speed ease;
             padding-top: 4rem;
         }

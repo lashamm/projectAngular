@@ -37,7 +37,7 @@ main{
         width: 100% !important;
     }
     main{
-        height: 130vh;
+        height: auto;
     }
     .imgs{
         display: none;
@@ -47,6 +47,6 @@ main{
 
 @media screen and (max-width:450px) {
     main{
-        height: 250vh;
+        height: auto;
     }
 }

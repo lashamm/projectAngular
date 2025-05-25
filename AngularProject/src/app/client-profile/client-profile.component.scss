@@ -62,7 +62,11 @@ main{
             }
     }
 }
-
+@media screen and (max-width:811px) {
+    .info{
+        width: 600px;
+    }
+}
 
 @media screen and (max-width:610px) {
     .info{

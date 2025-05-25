@@ -3,7 +3,7 @@ main{
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    height: auto;
+    height: 80vh;
     padding-top:50px;
     background-image: url(../../../public/imgs/ბათუმი-scaled.jpg);
     background-position: center;
@@ -158,6 +158,9 @@ main{
 
 
 @media screen and (max-width: 880px) {
+    main{
+        height: auto !important;
+    }
     .choose{
         display: flex;
         flex-direction: column;
