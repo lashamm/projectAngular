@@ -75,9 +75,15 @@ main{
             font-size: 25px !important;
             padding-left: 5px !important;
             padding-right: 5px !important;
+            text-align: center !important;
         }
         &:hover{
             transform: scale(1.0) !important;
         }
+    }
+}
+@media screen and (max-width:402px) {
+    .info{
+        width: 310px !important;
     }
 }

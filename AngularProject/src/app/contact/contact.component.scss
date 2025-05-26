@@ -6,6 +6,9 @@ main{
     gap:50px;
     justify-content: center;
     align-items: center;
+    .h1resp{
+        display: none;
+    }
     #h1{
         width: 100%;
         margin-left:300px;
@@ -125,5 +128,12 @@ main{
 @media screen and (max-width:550px) {
     iframe{
         height: 300px;
+    }
+    #h1{
+        width: 100%;
+        display: none;
+    }
+    .h1resp{
+        display: inline !important;
     }
 }

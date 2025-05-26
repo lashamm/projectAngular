@@ -182,3 +182,98 @@ main{
         align-items: center;
     }
 }
+
+@media screen and (max-width:410px) {
+     .upper{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .left{
+            display: flex;
+            flex-direction: column;
+            gap:40px;
+            #adr{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+            a{
+                text-decoration: none;
+                transition: 0.3s;
+                &:hover{
+                    color:red
+                }
+            }
+        }
+            #mail{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                p{
+                    text-decoration: none;
+                    cursor:pointer;
+                    transition: 0.3s;
+                    
+                    &:hover{
+                        color:red;
+                    }
+                }
+            }
+            #num{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                p{
+                    text-decoration: none;
+                    cursor:pointer;
+                    transition: 0.3s;
+                    &:hover{
+                        color:red;
+                    }
+                }
+            }
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            gap:40px;
+            #soc1{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+            a{
+                text-decoration: none;
+                transition: 0.3s;
+                &:hover{
+                    color:red
+                }
+            }
+        }
+            #soc2{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                a{
+                    text-decoration: none;
+                    transition: 0.3s;
+                    &:hover{
+                        color:red
+                    }
+                }
+            }
+            #work{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                p{
+                    text-decoration: none;
+                    cursor:pointer;
+                    transition: 0.3s;
+                    &:hover{
+                        color:red;
+                    }
+                }
+            }
+        }
+    }
+}
