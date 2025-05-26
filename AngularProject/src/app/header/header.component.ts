@@ -25,12 +25,14 @@ route =""
 
   togleBurger(){
     this.show = !this.show
+    document.body.style.overflow = this.show ? 'hidden' : 'auto';
     // this.show ? this.router.navigateByUrl('/mobile-nav') : this.router.navigateByUrl('/home')
 
   }
 
   hideBurger(event : boolean){
     this.show = event
+    document.body.style.overflow = this.show ? 'hidden' : 'auto';
   }
 
 }
