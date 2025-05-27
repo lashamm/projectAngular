@@ -119,3 +119,9 @@ button {
         }
 }
 }
+
+@media screen and (max-width:350px) {
+  .seat{
+    width: 130px;
+  }
+}
