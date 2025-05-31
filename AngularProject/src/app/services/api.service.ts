@@ -29,14 +29,12 @@ export class ApiService {
    return this.http.delete(`https://railway.stepprojects.ge/api/tickets/cancel/${ticketId}`, 
      {responseType: 'text'})
   }
-  register(phoneNumber: string, password: string, email: string, firstName: string, lastName: string, role: string) {
+  register(phoneNumber: string, password: string, email: string, firstName: string,) {
     const userData = {
         phoneNumber,
         password,
         email,
         firstName,
-        lastName,
-        role
     }
     
     return this.http.post(

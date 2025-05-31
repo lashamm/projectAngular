@@ -42,7 +42,9 @@ this.cardOwner == '' ||
     "mail": this.mail,
     'num': this.num,
     'pass': this.pass
-  })
+  });
+    this.api.register(this.num, this.pass, this.mail, this.name);
+
   this.auth.auth()
   console.log(this.userObj)
   localStorage.setItem('userObj',JSON.stringify(this.userObj))
