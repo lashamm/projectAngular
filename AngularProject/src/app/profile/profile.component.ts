@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterModule } from '@angular/router';
-import { userObj } from '../models/user';
-import Swal from 'sweetalert2';
+import { userData, userObj } from '../models/user';
 import { SignalService } from '../services/signal.service';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-profile',
@@ -13,7 +13,7 @@ import { SignalService } from '../services/signal.service';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
-  constructor( private auth : SignalService) { }
+  constructor( private auth : SignalService, private api : ApiService) { }
 name = ''
 mail = ''
 num = ''
@@ -24,6 +24,7 @@ expData = ''
 ccv = ''
 
 userObj : userObj[] = []
+userData : userData[] = []
 
 click(){
   if(this.name == '' || 
@@ -34,7 +35,6 @@ click(){
 this.cardOwner == '' || 
   this.expData == '' ||
       this.ccv == '' ){
-        // Swal.fire("შეავსეთ ყველა ველი");
   }
   else{
   this.userObj.push({
@@ -43,7 +43,6 @@ this.cardOwner == '' ||
     'num': this.num,
     'pass': this.pass
   })
-  // Swal.fire("თქვენ წარმატებით დარეგისტრირდით");
   this.auth.auth()
   console.log(this.userObj)
   localStorage.setItem('userObj',JSON.stringify(this.userObj))

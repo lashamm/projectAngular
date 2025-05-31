@@ -21,10 +21,28 @@ export class ApiService {
     return this.http.get(`https://railway.stepprojects.ge/api/getvagon/${id}`)
   }
   postTickets(seat:any){
-    return this.http.post(`https://railway.stepprojects.ge/api/tickets/register`, seat, {responseType: 'text'} )
+    return this.http.post(`https://railway.stepprojects.ge/api/tickets/register`, 
+      seat, 
+      {responseType: 'text'} )
   }
   deleteTick(ticketId : any){
-   return this.http.delete(`https://railway.stepprojects.ge/api/tickets/cancel/${ticketId}`,  {responseType: 'text'})
+   return this.http.delete(`https://railway.stepprojects.ge/api/tickets/cancel/${ticketId}`, 
+     {responseType: 'text'})
   }
-
+  register(phoneNumber: string, password: string, email: string, firstName: string, lastName: string, role: string) {
+    const userData = {
+        phoneNumber,
+        password,
+        email,
+        firstName,
+        lastName,
+        role
+    }
+    
+    return this.http.post(
+        `https://rentcar.stepprojects.ge/api/Users/register`,
+        userData,
+        { responseType: 'text' }
+    )
+}
 }
